@@ -1,4 +1,11 @@
-export interface Planets {
+export interface PlanetsData {
+  count: number;
+  next: string;
+  previous: null;
+  results: PlanetResult[];
+}
+
+export interface PlanetResult {
   name: string;
   rotation_period: string;
   orbital_period: string;
@@ -8,7 +15,7 @@ export interface Planets {
   terrain: string;
   surface_water: string;
   population: string;
-  residents: any[];
+  residents: string[];
   films: string[];
   created: Date;
   edited: Date;

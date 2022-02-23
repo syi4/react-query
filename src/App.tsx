@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Characters } from "./components/Characters";
 import { Navbar } from "./components/Navbar";
-import { PlanetsComponent } from "./components/PlanetsComponent";
+import { Planets } from "./components/Planets";
 
 export const App: React.FC = () => {
   const [page, setPage] = useState("planets");
@@ -11,7 +11,7 @@ export const App: React.FC = () => {
       <h1>Star Wars Info</h1>
       <Navbar setPage={setPage} />
       <div className="content">
-        {page === "planets" ? <PlanetsComponent /> : <Characters />}
+        {page === "planets" ? <Planets /> : <Characters />}
       </div>
     </div>
   );
