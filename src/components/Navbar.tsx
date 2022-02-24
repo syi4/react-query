@@ -1,16 +1,16 @@
 import React from "react";
 
 interface NavbarProps {
-  setPage: React.Dispatch<React.SetStateAction<string>>;
+  setPageByCategory: React.Dispatch<React.SetStateAction<string>>;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ setPage }) => {
+export const Navbar: React.FC<NavbarProps> = ({ setPageByCategory }) => {
   return (
-    <div>
-      <nav>
-        <button onClick={() => setPage("planets")}>Planets</button>
-        <button onClick={() => setPage("characters")}>Characters</button>
-      </nav>
-    </div>
+    <nav>
+      <button onClick={() => setPageByCategory("planets")}>Planets</button>
+      <button onClick={() => setPageByCategory("characters")}>
+        Characters
+      </button>
+    </nav>
   );
 };
